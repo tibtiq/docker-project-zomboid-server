@@ -24,6 +24,11 @@
 - **SERVER_PUBLIC_DESC** Public description of your server
 - **SERVER_MAX_PLAYER** Maximum number of players on your server (default: 16)
 
+### Mods
+
+- **MODS** "mod_id1;mod_id2;..."
+- **WORKSHOPITEMS** "workshop_id1;workshop_id2;..."
+
 ### RCON
 
 - **RCON_PORT** RCON port (default: 27015)
