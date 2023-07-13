@@ -27,13 +27,13 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/projectzomboid-server:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/project-zomboid-server:latest
 
       - name: Docker Hub Description
         uses: peter-evans/dockerhub-description@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/projectzomboid-server
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/project-zomboid-server
           readme-filepath: ./readme.md
           short-description: Project Zomboid Server Docker Image
