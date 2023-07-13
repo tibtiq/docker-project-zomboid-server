@@ -29,6 +29,14 @@
 - **MODS** "mod_id1;mod_id2;..."
 - **WORKSHOPITEMS** "workshop_id1;workshop_id2;..."
 
+### Toggling anticheat protection types
+- Supported types: 1-24
+- **ANTICHEAT_PROTECTION_TYPE1** "true"
+- ...
+- **ANTICHEAT_PROTECTION_TYPE24** "false"
+- Defaults to all protection types being enabled
+
+
 ### RCON
 
 - **RCON_PORT** RCON port (default: 27015)
