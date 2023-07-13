@@ -66,7 +66,7 @@ EXPOSE ${RCON_PORT}
 VOLUME ["/data/server-file", "/data/config"]
 
 # add default spawn locations from hosting server through steam
-COPY server_spawnregions.lua /data/config/Server
+COPY server_spawnregions.lua /data/config/Server/server_spawnregions.lua
 
 COPY entry.sh /data/scripts/entry.sh
 CMD ["bash", "/data/scripts/entry.sh"]
