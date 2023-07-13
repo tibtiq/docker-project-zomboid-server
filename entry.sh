@@ -75,6 +75,7 @@ then
   echo "AntiCheatProtectionType22=${ANTICHEAT_PROTECTION_TYPE22}" >> ${server_ini}
   echo "AntiCheatProtectionType23=${ANTICHEAT_PROTECTION_TYPE23}" >> ${server_ini}
   echo "AntiCheatProtectionType24=${ANTICHEAT_PROTECTION_TYPE24}" >> ${server_ini}
+  echo "SpawnPoint=${SPAWN_POINT}" >> ${server_ini}
 fi
 
 chown -R pzombie:pzombie /data/config/

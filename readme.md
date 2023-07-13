@@ -36,6 +36,10 @@
 - **ANTICHEAT_PROTECTION_TYPE24** "false"
 - Defaults to all protection types being enabled
 
+### Spawn point
+
+- **SPAWN_POINT** x,y,z
+- Defaults to 0,0,0. Which disables the fixed spawn point
 
 ### RCON
 
