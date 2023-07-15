@@ -17,7 +17,7 @@ fi
 
 # Update pzserver
 echo "Updating Project Zomboid..."
-if [ "$BRANCH" == "" ]
+if [ "$SERVER_BRANCH" == "" ]
 then
   su pzombie -s /bin/sh -p -c "/home/steam/steamcmd.sh +force_install_dir /data/server-file +login anonymous +app_update 380870 +quit"
 else
