@@ -1,5 +1,9 @@
 # Project Zomboid Server
 
+## Supported Zomboid version
+41.78.16
+This has to do with the supported server.ini settings that can be modified from the docker compose environment variables.
+
 ## Volumes
 
 - `/data/server-file` Project Zomboid server file
