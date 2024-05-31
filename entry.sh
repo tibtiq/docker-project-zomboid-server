@@ -11,6 +11,7 @@ if [ ! -f /home/steam/steamcmd.sh ]; then
   cd /home/steam/
   curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
   chown -R pzombie:pzombie /home/steam
+  mkdir -p /data/server-file
   chown -R pzombie:pzombie /data/server-file
 fi
 
