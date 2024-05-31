@@ -1,12 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 # Ensure User and Group IDs
-if [ ! "$(id -u pzombie)" -eq "$UID" ]; then usermod -o -u "$UID" pzombie ; fi
-if [ ! "$(id -g pzombie)" -eq "$GID" ]; then groupmod -o -g "$GID" pzombie ; fi
+if [ ! "$(id -u pzombie)" -eq "$UID" ]; then usermod -o -u "$UID" pzombie; fi
+if [ ! "$(id -g pzombie)" -eq "$GID" ]; then groupmod -o -g "$GID" pzombie; fi
 
 # Install SteamCMD
-if [ ! -f /home/steam/steamcmd.sh ]
-then
+if [ ! -f /home/steam/steamcmd.sh ]; then
   echo "Downloading SteamCMD..."
   mkdir -p /home/steam/
   cd /home/steam/
@@ -17,8 +16,7 @@ fi
 
 # Update pzserver
 echo "Updating Project Zomboid..."
-if [ "$SERVER_BRANCH" == "" ]
-then
+if [ "$SERVER_BRANCH" == "" ]; then
   su pzombie -s /bin/sh -p -c "/home/steam/steamcmd.sh +force_install_dir /data/server-file +login anonymous +app_update 380870 +quit"
 else
   su pzombie -s /bin/sh -p -c "/home/steam/steamcmd.sh +force_install_dir /data/server-file +login anonymous +app_update 380870 -beta ${SERVERBRANCH} +quit"
@@ -26,8 +24,7 @@ fi
 
 # Symlink
 echo "Creating symlink for config folder..."
-if [ ! -d /data/config ]
-then
+if [ ! -d /data/config ]; then
   mkdir -p /data/config
 fi
 su pzombie -s /bin/sh -p -c "ln -s /data/config /home/pzombie/Zomboid"
@@ -36,8 +33,7 @@ su pzombie -s /bin/sh -p -c "ln -s /data/config /home/pzombie/Zomboid"
 server_ini="/data/config/Server/${SERVER_NAME}.ini"
 
 # create new server.ini
-if [ -f $server_ini ]
-then
+if [ -f $server_ini ]; then
   rm $server_ini
 fi
 
@@ -48,20 +44,19 @@ touch ${server_ini}
 default_settings_path="/scripts/default_settings.txt"
 while read line; do
   # split setting name and default value
-  IFS='=' read -r -a setting_pair <<< "$line"
+  IFS='=' read -r -a setting_pair <<<"$line"
   setting_name="${setting_pair[0]}"
   setting_default_value="${setting_pair[1]}"
 
   # check if there isn't a variable with matching setting name
-  if [ -z "${!setting_name}" ]
-  then
+  if [ -z "${!setting_name}" ]; then
     # use default value
-    echo "${setting_name}=${setting_default_value}" >> $server_ini
+    echo "${setting_name}=${setting_default_value}" >>$server_ini
   else
     # use docker compose environment variable value
-    echo "${setting_name}=${!setting_name}" >> $server_ini
+    echo "${setting_name}=${!setting_name}" >>$server_ini
   fi
-done < $default_settings_path
+done <$default_settings_path
 
 chown -R pzombie:pzombie /data/config/
 
