@@ -37,7 +37,7 @@ def scrape_workshop_id(website_html: str) -> str | None:
 def main() -> None:
     """Script entry point directly run.
     """
-    website_html = requests.get('https://steamcommunity.com/sharedfiles/filedetails/?id=3258343790').text
+    website_html = requests.get('https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091').text
 
     mod_id = scrape_mod_id(website_html)
     print(f'mod id: {mod_id}')
