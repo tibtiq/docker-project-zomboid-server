@@ -6,7 +6,7 @@ def scrape_workshop_link(url: str) -> str:
     return requests.get(url).text
 
 
-def scrape_mod_id(website_html: str) -> str | None:
+def parse_mod_id(website_html: str) -> str | None:
     patterns = [
         r'Mod ID: (.*)(?=</div>)',
     ]
@@ -22,7 +22,7 @@ def scrape_mod_id(website_html: str) -> str | None:
     else:
         return mod_id.group(1)
 
-def scrape_workshop_id(website_html: str) -> str | None:
+def parse_workshop_id(website_html: str) -> str | None:
     patterns = [
         r'Workshop ID: (\d{10})',
     ]
@@ -43,9 +43,9 @@ def main() -> None:
     """Script entry point directly run.
     """
     website_html = scrape_workshop_link('https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091')
-    mod_id = scrape_mod_id(website_html)
+    mod_id = parse_mod_id(website_html)
     print(f'mod id: {mod_id}')
-    workshop_id = scrape_workshop_id(website_html)
+    workshop_id = parse_workshop_id(website_html)
     print(f'workshop id: {workshop_id}')
 
 
