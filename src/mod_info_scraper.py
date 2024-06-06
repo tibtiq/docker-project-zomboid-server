@@ -24,7 +24,7 @@ def parse_mod_id(website_html: str) -> str | None:
         return mod_id.group(1)
 
 
-def parse_workshop_id(website_html: str) -> str | None:
+def parse_workshop_id(website_html: str) -> int | None:
     patterns = [
         r'Workshop ID: (\d{10})',
     ]
@@ -38,7 +38,7 @@ def parse_workshop_id(website_html: str) -> str | None:
     if workshop_id is None:
         return None
     else:
-        return workshop_id.group(1)
+        return int(workshop_id.group(1))
 
 
 def main() -> None:
