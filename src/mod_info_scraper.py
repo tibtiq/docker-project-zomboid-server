@@ -2,6 +2,10 @@ import requests
 import re
 
 
+def scrape_workshop_link(url: str) -> str:
+    return requests.get(url).text
+
+
 def scrape_mod_id(website_html: str) -> str | None:
     patterns = [
         r'Mod ID: (.*)(?=</div>)',
@@ -34,11 +38,11 @@ def scrape_workshop_id(website_html: str) -> str | None:
     else:
         return workshop_id.group(1)
 
+
 def main() -> None:
     """Script entry point directly run.
     """
-    website_html = requests.get('https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091').text
-
+    website_html = scrape_workshop_link('https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091')
     mod_id = scrape_mod_id(website_html)
     print(f'mod id: {mod_id}')
     workshop_id = scrape_workshop_id(website_html)
