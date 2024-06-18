@@ -9,7 +9,7 @@ def scrape_workshop_link(url: str) -> str:
 
 def parse_mod_id(website_html: str) -> str | None:
     patterns = [
-        r'Mod ID: (.*)(?=</div>)',
+        r'Mod ID: (.*)(?=<\/div>)',
     ]
 
     for pattern in patterns:
