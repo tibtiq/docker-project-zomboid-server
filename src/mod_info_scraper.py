@@ -20,9 +20,8 @@ def parse_mod_id(website_html: str) -> str | None:
 
     if mod_id is None:
         return None
-    else:
-        return mod_id.group(1)
 
+    return mod_id.group(pattern.group_index)
 
 def parse_workshop_id(website_html: str) -> str | None:
     patterns = [
@@ -37,9 +36,8 @@ def parse_workshop_id(website_html: str) -> str | None:
 
     if workshop_id is None:
         return None
-    else:
-        return workshop_id.group(1)
 
+    return workshop_id.group(1)
 
 def main() -> None:
     """Script entry point directly run.
