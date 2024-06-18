@@ -6,7 +6,7 @@ import requests
 
 @dataclass
 class ModIdPattern:
-    """Data structure representing a potential Mod id pattern
+    """Data structure representing a potential mod id pattern
     """
     regex_pattern: str
     group_index: int
