@@ -15,7 +15,7 @@ def parse_mod_id(website_html: str) -> str | None:
     for pattern in patterns:
         mod_id = re.search(pattern, website_html)
 
-        if mod_id is None:
+        if mod_id is not None:
             break
 
     if mod_id is None:
@@ -32,7 +32,7 @@ def parse_workshop_id(website_html: str) -> str | None:
     for pattern in patterns:
         workshop_id = re.search(pattern, website_html)
 
-        if workshop_id is None:
+        if workshop_id is not None:
             break
 
     if workshop_id is None:
