@@ -13,6 +13,12 @@ class Test_something:
                 '2790006091',
                 id='regular'
             ),
+            pytest.param(
+                'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
+                'ISA_41',
+                '2857548524',
+                id='table'
+            ),
         ]
     )
     def test_thing(self, url: str, expected_mod_id: int, expected_workshop_id: str) -> None:

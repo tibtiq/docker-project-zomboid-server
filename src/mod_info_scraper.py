@@ -1,6 +1,15 @@
 import re
+from dataclasses import dataclass
 
 import requests
+
+
+@dataclass
+class ModIdPattern:
+    """Data structure representing a potential Mod id pattern
+    """
+    regex_pattern: str
+    group_index: int
 
 
 def scrape_workshop_link(url: str) -> str:
@@ -9,12 +18,13 @@ def scrape_workshop_link(url: str) -> str:
 
 def parse_mod_id(website_html: str) -> str | None:
     patterns = [
-        r'Mod ID: (.*)(?=<\/div>)',
+        ModIdPattern(r'Mod ID: (.*)(?=<\/div>)', 1),
+        ModIdPattern(r'Mod ID:\t(.*)\t(.*)\t<\/div>', 2),
     ]
-
+    with open('test.txt', 'w', encoding='utf-8') as file:
+        file.write(website_html)
     for pattern in patterns:
-        mod_id = re.search(pattern, website_html)
-
+        mod_id = re.search(pattern.regex_pattern, website_html)
         if mod_id is not None:
             break
 
