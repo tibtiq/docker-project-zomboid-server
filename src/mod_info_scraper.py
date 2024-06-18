@@ -21,8 +21,6 @@ def parse_mod_id(website_html: str) -> str | None:
         ModIdPattern(r'Mod ID: (.*)(?=<\/div>)', 1),
         ModIdPattern(r'Mod ID:\t(.*)\t(.*)\t<\/div>', 2),
     ]
-    with open('test.txt', 'w', encoding='utf-8') as file:
-        file.write(website_html)
     for pattern in patterns:
         mod_id = re.search(pattern.regex_pattern, website_html)
         if mod_id is not None:
