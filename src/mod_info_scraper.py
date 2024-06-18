@@ -23,30 +23,19 @@ def parse_mod_id(website_html: str) -> str | None:
 
     return mod_id.group(pattern.group_index)
 
-def parse_workshop_id(website_html: str) -> str | None:
-    patterns = [
-        r'Workshop ID: (\d{10})',
-    ]
 
-    for pattern in patterns:
-        workshop_id = re.search(pattern, website_html)
+def parse_workshop_id(url: str) -> str | None:
+    return url.split('id=')[-1]
 
-        if workshop_id is not None:
-            break
-
-    if workshop_id is None:
-        return None
-
-    return workshop_id.group(1)
 
 def main() -> None:
     """Script entry point directly run.
     """
-    website_html = scrape_workshop_link(
-        'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091')
+    workshop_link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091'
+    website_html = scrape_workshop_link(workshop_link)
     mod_id = parse_mod_id(website_html)
     print(f'mod id: {mod_id}')
-    workshop_id = parse_workshop_id(website_html)
+    workshop_id = parse_workshop_id(workshop_link)
     print(f'workshop id: {workshop_id}')
 
 

@@ -18,7 +18,7 @@ class Test_something:
     def test_thing(self, url: str, expected_mod_id: int, expected_workshop_id: str) -> None:
         website_html = mod_info_scraper.scrape_workshop_link(url)
         mod_id = mod_info_scraper.parse_mod_id(website_html)
-        workshop_id = mod_info_scraper.parse_workshop_id(website_html)
+        workshop_id = mod_info_scraper.parse_workshop_id(url)
 
         assert mod_id == expected_mod_id
         assert workshop_id == expected_workshop_id
