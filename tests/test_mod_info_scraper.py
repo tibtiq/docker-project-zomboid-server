@@ -7,8 +7,12 @@ class Test_something:
     @pytest.mark.parametrize(
         'url, expected_mod_id, expected_workshop_id',
         [
-            ('https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
-             'craftable-lights-robboinnit', '2790006091'),
+            pytest.param(
+                'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
+                'craftable-lights-robboinnit',
+                '2790006091',
+                id='regular'
+            ),
         ]
     )
     def test_thing(self, url: str, expected_mod_id: int, expected_workshop_id: str) -> None:
