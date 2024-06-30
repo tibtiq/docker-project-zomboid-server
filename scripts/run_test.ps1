@@ -1,1 +1,1 @@
-pytest --cov-report term-missing:skip-covered --cov=src ../tests -s -v
+pytest $PSScriptRoot/../tests --cov-report term-missing:skip-covered --cov=src -s -v
