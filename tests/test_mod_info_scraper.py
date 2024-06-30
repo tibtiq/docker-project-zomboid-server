@@ -2,7 +2,7 @@ import pytest
 
 import src.mod_info_scraper as mod_info_scraper
 
-
+# todo separate scrape_workshop_link() into its own test
 class Test_something:
     @pytest.mark.parametrize(
         'url, expected_mod_id, expected_workshop_id',
