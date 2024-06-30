@@ -12,8 +12,8 @@ class ModIdPattern:
     group_index: int
 
 
-def scrape_workshop_link(url: str) -> str:
-    return requests.get(url).text
+def scrape_workshop_link(link: str) -> str:
+    return requests.get(link).text
 
 
 def parse_mod_id(website_html: str) -> str | None:
@@ -32,8 +32,8 @@ def parse_mod_id(website_html: str) -> str | None:
     return mod_id.group(pattern.group_index)
 
 
-def parse_workshop_id(url: str) -> str | None:
-    return url.split('id=')[-1]
+def parse_workshop_id(link: str) -> str | None:
+    return link.split('id=')[-1]
 
 
 def main() -> None:
