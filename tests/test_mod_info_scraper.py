@@ -17,6 +17,16 @@ class Test_scrape_workshop_link:
 # todo separate scrape_workshop_link() into its own test
 
 
+class Test_parse_workshop_id:
+    def test_link(self):
+        link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524'
+        expected_workshop_id = '2857548524'
+
+        workshop_id = mod_info_scraper.parse_workshop_id(link)
+
+        assert workshop_id == expected_workshop_id
+
+
 class Test_something:
     @pytest.mark.parametrize(
         'link, expected_mod_id, expected_workshop_id',
