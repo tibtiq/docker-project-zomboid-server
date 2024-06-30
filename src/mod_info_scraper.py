@@ -13,7 +13,12 @@ class ModIdPattern:
 
 
 def scrape_workshop_link(link: str) -> str:
-    return requests.get(link).text
+    html = requests.get(link).text
+
+    if '<title>Steam Community :: Error</title>' in html:
+        raise Exception('invalid link')
+
+    return html
 
 
 def parse_mod_id(website_html: str) -> str | None:

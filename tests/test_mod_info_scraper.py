@@ -2,7 +2,21 @@ import pytest
 
 import src.mod_info_scraper as mod_info_scraper
 
+
+class Test_scrape_workshop_link:
+    def test_invalid_link(self) -> None:
+        link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=apwd'
+        with pytest.raises(Exception):
+            mod_info_scraper.scrape_workshop_link(link)
+
+    def test_valid_link(self) -> None:
+        link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091'
+        html = mod_info_scraper.scrape_workshop_link(link)
+        assert isinstance(html, str)
+
 # todo separate scrape_workshop_link() into its own test
+
+
 class Test_something:
     @pytest.mark.parametrize(
         'link, expected_mod_id, expected_workshop_id',
