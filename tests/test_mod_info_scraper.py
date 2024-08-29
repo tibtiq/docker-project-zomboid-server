@@ -1,3 +1,5 @@
+# pylint: disable=C0114, C0115, C0116
+
 import pytest
 
 import src.mod_info_scraper as mod_info_scraper
