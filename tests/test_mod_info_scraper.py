@@ -47,11 +47,11 @@ class TestParseModId:
                 'craftable-lights-robboinnit',
                 id='regular'
             ),
-            # pytest.param(
-            #     ''
-            #     'ISA_41',
-            #     id='table'
-            # ),
+            pytest.param(
+                '<div class="bb_table_td">	Mod ID:	</div><div class="bb_table_td">	ISA_41	</div></div></div></div></div>',
+                'ISA_41',
+                id='table'
+            ),
         ]
     )
     def test_parse_from_str(self, html: str, expected_mod_id: str) -> None:

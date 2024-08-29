@@ -24,7 +24,7 @@ def scrape_workshop_link(link: str) -> str:
 def parse_mod_id(website_html: str) -> str | None:
     patterns = [
         ModIdPattern(r'Mod ID: (.*)(?=<\/div>)', 1),
-        ModIdPattern(r'Mod ID:\t(.*)\t(.*)\t<\/div>', 2),
+        ModIdPattern(r'Mod\sID:\s(.*)\t(.*)\t<\/div>', 2),
     ]
     for pattern in patterns:
         mod_id = re.search(pattern.regex_pattern, website_html)
