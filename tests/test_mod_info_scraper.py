@@ -1,4 +1,4 @@
-# pylint: disable=C0114, C0115, C0116
+# pylint: disable=C0114, C0115, C0116, R0903
 
 import pytest
 
@@ -15,8 +15,6 @@ class TestScrapeWorkshopLink:
         link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091'
         html = mod_info_scraper.scrape_workshop_link(link)
         assert isinstance(html, str)
-
-# todo separate scrape_workshop_link() into its own test
 
 
 class TestParseModId:
