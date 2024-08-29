@@ -3,7 +3,7 @@ import pytest
 import src.mod_info_scraper as mod_info_scraper
 
 
-class Test_scrape_workshop_link:
+class TestScrapeWorkshopLink:
     def test_invalid_link(self) -> None:
         link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=apwd'
         with pytest.raises(Exception):
@@ -17,7 +17,7 @@ class Test_scrape_workshop_link:
 # todo separate scrape_workshop_link() into its own test
 
 
-class Test_parse_mod_id:
+class TestParseModId:
     @pytest.mark.parametrize(
         'link, expected_mod_id',
         [
@@ -40,7 +40,7 @@ class Test_parse_mod_id:
         assert mod_id == expected_mod_id
 
 
-class Test_parse_workshop_id:
+class TestParseWorkshopId:
     @pytest.mark.parametrize(
         'link, expected_workshop_id',
         [
