@@ -33,7 +33,7 @@ class TestParseModId:
             ),
         ]
     )
-    def test_parse_from_regular(self, link: str, expected_mod_id: str) -> None:
+    def test_parse_from_html(self, link: str, expected_mod_id: str) -> None:
         website_html = mod_info_scraper.scrape_workshop_link(link)
         mod_id = mod_info_scraper.parse_mod_id(website_html)
 
