@@ -39,6 +39,26 @@ class TestParseModId:
 
         assert mod_id == expected_mod_id
 
+    @pytest.mark.parametrize(
+        'html, expected_mod_id',
+        [
+            pytest.param(
+                '<br>Mod ID: craftable-lights-robboinnit</div>',
+                'craftable-lights-robboinnit',
+                id='regular'
+            ),
+            # pytest.param(
+            #     ''
+            #     'ISA_41',
+            #     id='table'
+            # ),
+        ]
+    )
+    def test_parse_from_str(self, html: str, expected_mod_id: str) -> None:
+        mod_id = mod_info_scraper.parse_mod_id(html)
+
+        assert mod_id == expected_mod_id
+
 
 class TestParseWorkshopId:
     @pytest.mark.parametrize(
