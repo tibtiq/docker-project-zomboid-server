@@ -2,7 +2,7 @@
 
 import pytest
 
-import src.mod_info_scraper as mod_info_scraper
+from src import mod_info_scraper
 
 
 class TestScrapeWorkshopLink:
