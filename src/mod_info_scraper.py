@@ -1,3 +1,6 @@
+# todo add option to parse from subscribed mods on steam
+# todo add option to parse from steam collection
+
 import re
 from dataclasses import dataclass
 
