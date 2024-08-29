@@ -17,38 +17,44 @@ class Test_scrape_workshop_link:
 # todo separate scrape_workshop_link() into its own test
 
 
-class Test_parse_workshop_id:
-    def test_link(self):
-        link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524'
-        expected_workshop_id = '2857548524'
-
-        workshop_id = mod_info_scraper.parse_workshop_id(link)
-
-        assert workshop_id == expected_workshop_id
-
-
-class Test_something:
+class Test_parse_mod_id:
     @pytest.mark.parametrize(
-        'link, expected_mod_id, expected_workshop_id',
+        'link, expected_mod_id',
         [
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
                 'craftable-lights-robboinnit',
-                '2790006091',
                 id='regular'
             ),
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
                 'ISA_41',
-                '2857548524',
                 id='table'
             ),
         ]
     )
-    def test_thing(self, link: str, expected_mod_id: int, expected_workshop_id: str) -> None:
+    def test_parse_from_regular(self, link: str, expected_mod_id: str) -> None:
         website_html = mod_info_scraper.scrape_workshop_link(link)
         mod_id = mod_info_scraper.parse_mod_id(website_html)
-        workshop_id = mod_info_scraper.parse_workshop_id(link)
 
         assert mod_id == expected_mod_id
+
+
+class Test_parse_workshop_id:
+    @pytest.mark.parametrize(
+        'link, expected_workshop_id',
+        [
+            pytest.param(
+                'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
+                '2790006091',
+            ),
+            pytest.param(
+                'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
+                '2857548524',
+            ),
+        ]
+    )
+    def test_parse_from_link(self, link: str, expected_workshop_id: str) -> None:
+        workshop_id = mod_info_scraper.parse_workshop_id(link)
+
         assert workshop_id == expected_workshop_id
