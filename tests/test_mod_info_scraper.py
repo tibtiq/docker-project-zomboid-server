@@ -39,6 +39,11 @@ class TestParseModId:
                 "https://steamcommunity.com/sharedfiles/filedetails/?id=3233560173",
                 ["Ninja Science"],
                 id="duplicates_with_breaks"
+            ),
+            pytest.param(
+                "https://steamcommunity.com/sharedfiles/filedetails/?id=2838108930",
+                ["HistoricalWeaponsAndArmor"],
+                id="bolded"
             )
         ]
     )

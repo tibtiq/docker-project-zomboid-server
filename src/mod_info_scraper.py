@@ -28,6 +28,7 @@ def scrape_workshop_link(link: str) -> str:
 
 def parse_mod_id(website_html: str) -> list[str] | None:
     patterns = [
+        ModIdPattern(r'<br>Mod ID: (.*?)<\/b>', 1),
         ModIdPattern(r'<br>Mod ID: (.*?)<br>', 1),
         ModIdPattern(r'Mod ID: (.*)(?=<\/div>)', 1),
         ModIdPattern(r'Mod\sID:\s(.*)\t(.*)\t<\/div>', 2),
