@@ -35,6 +35,11 @@ class TestParseModId:
                 ['ISA_41'],
                 id='table'
             ),
+            pytest.param(
+                "https://steamcommunity.com/sharedfiles/filedetails/?id=3233560173",
+                ["Ninja Science"],
+                id="duplicates_with_breaks"
+            )
         ]
     )
     def test_parse_from_html(self, link: str, expected_mod_id: str) -> None:
