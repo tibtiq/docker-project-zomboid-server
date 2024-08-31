@@ -44,6 +44,11 @@ class TestParseModId:
                 "https://steamcommunity.com/sharedfiles/filedetails/?id=2838108930",
                 ["HistoricalWeaponsAndArmor"],
                 id="bolded"
+            ),
+            pytest.param(
+                "https://steamcommunity.com/sharedfiles/filedetails/?id=2949916678",
+                ["DryFishMod"],
+                id="block_quote"
             )
         ]
     )
