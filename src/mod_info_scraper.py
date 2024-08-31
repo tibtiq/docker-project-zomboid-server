@@ -1,5 +1,7 @@
 # todo add option to parse from subscribed mods on steam
 # todo add option to parse from steam collection
+# todo support maps
+# todo support mods with multiple mod ids
 
 import re
 from dataclasses import dataclass
