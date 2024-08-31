@@ -30,7 +30,8 @@ def parse_mod_id(website_html: str) -> list[str] | None:
     patterns = [
         ModIdPattern(r'<br>Mod ID: (.*?)<\/b>', 1),
         ModIdPattern(r'<br>Mod ID: (.*?)<br>', 1),
-        ModIdPattern(r'Mod ID: (.*?)(<\/blockquote>)?<\/div>', 1),
+        ModIdPattern(
+            r'Mod ID: (.*?)(<\/blockquote>)?(</ul></li></ul>)?<\/div>', 1),
         ModIdPattern(r'Mod\sID:\s(.*)\t(.*)\t<\/div>', 2),
     ]
     for pattern in patterns:

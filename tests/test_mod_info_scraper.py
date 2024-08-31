@@ -49,7 +49,12 @@ class TestParseModId:
                 "https://steamcommunity.com/sharedfiles/filedetails/?id=2949916678",
                 ["DryFishMod"],
                 id="block_quote"
-            )
+            ),
+            pytest.param(
+                "https://steamcommunity.com/sharedfiles/filedetails/?id=2618566294",
+                ["MattSimpleAddonsFriuts"],
+                id="list",
+            ),
         ]
     )
     def test_parse_from_html(self, link: str, expected_mod_id: str) -> None:
