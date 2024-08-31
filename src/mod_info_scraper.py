@@ -40,8 +40,8 @@ def parse_mod_id(website_html: str) -> str | None:
     return mod_id.group(pattern.group_index)
 
 
-def parse_workshop_id(link: str) -> str | None:
-    return link.split('id=')[-1]
+def parse_workshop_id(link: str) -> int | None:
+    return int(link.split('id=')[-1])
 
 
 def main() -> None:

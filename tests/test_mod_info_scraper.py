@@ -66,11 +66,11 @@ class TestParseWorkshopId:
         [
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
-                '2790006091',
+                2790006091,
             ),
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
-                '2857548524',
+                2857548524,
             ),
         ]
     )
