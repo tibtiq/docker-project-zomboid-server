@@ -6,5 +6,253 @@
     "https://steamcommunity.com/sharedfiles/filedetails/?id=3233560173": {
         "workshop_id": 3233560173,
         "mod_id": ["Ninja Science"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2920089312": {
+        "workshop_id": 2920089312,
+        "mod_id": ["MaintenanceImprovesRepair"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2648779556": {
+        "workshop_id": 2648779556,
+        "mod_id": ["TrueActionsDancing"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2458631365": {
+        "workshop_id": 2458631365,
+        "mod_id": ["ExpandedHelicopterEvents"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2804531012": {
+        "workshop_id": 2804531012,
+        "mod_id": ["DRAW_ON_MAP"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2734705913": {
+        "workshop_id": 2734705913,
+        "mod_id": ["MapSymbolSizeSlider"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2757712197": {
+        "workshop_id": 2757712197,
+        "mod_id": ["VehicleRepairOverhaul"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2544353492": {
+        "workshop_id": 2544353492,
+        "mod_id": ["P4HasBeenRead"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2710167561": {
+        "workshop_id": 2710167561,
+        "mod_id": ["MapLegendUI"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2685168362": {
+        "workshop_id": 2685168362,
+        "mod_id": ["MoreDescriptionForTraits4166"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2895102994": {
+        "workshop_id": 2895102994,
+        "mod_id": ["Advanced_trajectory"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2879159332": {
+        "workshop_id": 2879159332,
+        "mod_id": ["BastardSword"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2861943662": {
+        "workshop_id": 2861943662,
+        "mod_id": ["MexicanMeleeAncientWepons"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2776318649": {
+        "workshop_id": 2776318649,
+        "mod_id": ["HandmadeWeapons"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2708704237": {
+        "workshop_id": 2708704237,
+        "mod_id": ["boneMod"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2789756484": {
+        "workshop_id": 2789756484,
+        "mod_id": ["withworthpzrifle"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2747482455": {
+        "workshop_id": 2747482455,
+        "mod_id": ["NCRA"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2296517419": {
+        "workshop_id": 2296517419,
+        "mod_id": ["DressingTime"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2834473755": {
+        "workshop_id": 2834473755,
+        "mod_id": ["Definitelynot_1"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2838108930": {
+        "workshop_id": 2838108930,
+        "mod_id": ["HistoricalWeaponsAndArmor"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2844685624": {
+        "workshop_id": 2844685624,
+        "mod_id": ["TryhonestyTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2740919036": {
+        "workshop_id": 2740919036,
+        "mod_id": ["SkizotsTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2852704777": {
+        "workshop_id": 2852704777,
+        "mod_id": ["simonMDsTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2837923608": {
+        "workshop_id": 2837923608,
+        "mod_id": ["PertsPartyTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2844829195": {
+        "workshop_id": 2844829195,
+        "mod_id": ["OujinjinTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2879745353": {
+        "workshop_id": 2879745353,
+        "mod_id": ["melos_tiles_for_miles_pack"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2734679675": {
+        "workshop_id": 2734679675,
+        "mod_id": ["GreensTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2554699200": {
+        "workshop_id": 2554699200,
+        "mod_id": ["FantaStreetTiles_01"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2774834715": {
+        "workshop_id": 2774834715,
+        "mod_id": ["EN_Newburbs"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2599752664": {
+        "workshop_id": 2599752664,
+        "mod_id": ["DylansTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2337452747": {
+        "workshop_id": 2337452747,
+        "mod_id": ["Diederiks Tile Palooza"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2925574774": {
+        "workshop_id": 2925574774,
+        "mod_id": ["Cookie_Tiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2804428637": {
+        "workshop_id": 2804428637,
+        "mod_id": ["BigZombieMonkeys_tile_pack"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2898065560": {
+        "workshop_id": 2898065560,
+        "mod_id": ["AzaMountainTiles"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524": {
+        "workshop_id": 2857548524,
+        "mod_id": ["ISA_41"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2464581798": {
+        "workshop_id": 2464581798,
+        "mod_id": ["waterPipes"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=3000072530": {
+        "workshop_id": 3000072530,
+        "mod_id": ["StorageOMatic3000"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2847184718": {
+        "workshop_id": 2847184718,
+        "mod_id": ["ProximityInventory"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2949916678": {
+        "workshop_id": 2949916678,
+        "mod_id": ["DryFishMod"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=639909479": {
+        "workshop_id": 639909479,
+        "mod_id": ["Silencer"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2695471997": {
+        "workshop_id": 2695471997,
+        "mod_id": ["myclothinguimod"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2875848298": {
+        "workshop_id": 2875848298,
+        "mod_id": ["BB_CommonSense"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2859296947": {
+        "workshop_id": 2859296947,
+        "mod_id": ["MoodleFramework"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2553809727": {
+        "workshop_id": 2553809727,
+        "mod_id": ["KillCount"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2680473910": {
+        "workshop_id": 2680473910,
+        "mod_id": ["TheWorkshop(new version)"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2392709985": {
+        "workshop_id": 2392709985,
+        "mod_id": ["tsarslib"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2986578314": {
+        "workshop_id": 2986578314,
+        "mod_id": ["TchernoLib"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2487022075": {
+        "workshop_id": 2487022075,
+        "mod_id": ["TMC_TrueActions"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2882963187": {
+        "workshop_id": 2882963187,
+        "mod_id": ["StalkerExo"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2877685881": {
+        "workshop_id": 2877685881,
+        "mod_id": ["FactionMap"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2839025395": {
+        "workshop_id": 2839025395,
+        "mod_id": ["TKS"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2865715979": {
+        "workshop_id": 2865715979,
+        "mod_id": ["EveryKatanaXSheaths"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2618566294": {
+        "workshop_id": 2618566294,
+        "mod_id": ["MattSimpleAddonsFriuts"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2619072426": {
+        "workshop_id": 2619072426,
+        "mod_id": ["TheStar"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2169435993": {
+        "workshop_id": 2169435993,
+        "mod_id": ["modoptions"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2968318536": {
+        "workshop_id": 2968318536,
+        "mod_id": ["FastForward"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2996504752": {
+        "workshop_id": 2996504752,
+        "mod_id": ["ClimbWall"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2942795802": {
+        "workshop_id": 2942795802,
+        "mod_id": ["ZombieButcher"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2592358528": {
+        "workshop_id": 2592358528,
+        "mod_id": ["ATA_Bus"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2658619264": {
+        "workshop_id": 2658619264,
+        "mod_id": ["ScrapArmor(new version)"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2004998206": {
+        "workshop_id": 2004998206,
+        "mod_id": ["MinimalDisplayBars"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2313387159": {
+        "workshop_id": 2313387159,
+        "mod_id": ["BetterSortCC"]
+    },
+    "https://steamcommunity.com/sharedfiles/filedetails/?id=2879960936": {
+        "workshop_id": 2879960936,
+        "mod_id": ["POM"]
     }
 }
