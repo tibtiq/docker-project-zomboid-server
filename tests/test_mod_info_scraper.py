@@ -1,5 +1,9 @@
 # pylint: disable=C0114, C0115, C0116, R0903
 
+import json
+import os
+import pathlib
+
 import pytest
 
 from src import mod_info_scraper
@@ -78,3 +82,22 @@ class TestParseWorkshopId:
         workshop_id = mod_info_scraper.parse_workshop_id(link)
 
         assert workshop_id == expected_workshop_id
+
+
+class TestIntegration:
+    def test_mod_list(self) -> None:
+        mods_file_path = pathlib.Path(
+            os.path.abspath(__file__)).parent / 'mods.json'
+        with open(mods_file_path, encoding='utf-8') as file:
+            mods = json.load(file)
+
+        for mod_link, mod_info in mods.items():
+            expected_workshop_id = mod_info['workshop_id']
+            expected_mod_id = mod_info['mod_id']
+
+            website_html = mod_info_scraper.scrape_workshop_link(mod_link)
+            mod_id = mod_info_scraper.parse_mod_id(website_html)
+            assert mod_id == expected_mod_id
+
+            workshop_id = mod_info_scraper.parse_workshop_id(mod_link)
+            assert workshop_id == expected_workshop_id
