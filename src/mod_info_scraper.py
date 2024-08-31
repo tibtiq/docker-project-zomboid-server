@@ -24,7 +24,7 @@ def scrape_workshop_link(link: str) -> str:
     return html
 
 
-def parse_mod_id(website_html: str) -> str | None:
+def parse_mod_id(website_html: str) -> list[str] | None:
     patterns = [
         ModIdPattern(r'Mod ID: (.*)(?=<\/div>)', 1),
         ModIdPattern(r'Mod\sID:\s(.*)\t(.*)\t<\/div>', 2),
@@ -37,7 +37,7 @@ def parse_mod_id(website_html: str) -> str | None:
     if mod_id is None:
         return None
 
-    return mod_id.group(pattern.group_index)
+    return [mod_id.group(pattern.group_index)]
 
 
 def parse_workshop_id(link: str) -> int | None:

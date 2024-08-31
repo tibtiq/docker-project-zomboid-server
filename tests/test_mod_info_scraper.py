@@ -23,12 +23,12 @@ class TestParseModId:
         [
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
-                'craftable-lights-robboinnit',
+                ['craftable-lights-robboinnit'],
                 id='regular'
             ),
             pytest.param(
                 'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
-                'ISA_41',
+                ['ISA_41'],
                 id='table'
             ),
         ]
@@ -44,12 +44,12 @@ class TestParseModId:
         [
             pytest.param(
                 '<br>Mod ID: craftable-lights-robboinnit</div>',
-                'craftable-lights-robboinnit',
+                ['craftable-lights-robboinnit'],
                 id='regular'
             ),
             pytest.param(
                 '<div class="bb_table_td">	Mod ID:	</div><div class="bb_table_td">	ISA_41	</div></div></div></div></div>',
-                'ISA_41',
+                ['ISA_41'],
                 id='table'
             ),
         ]
