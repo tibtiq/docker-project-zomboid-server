@@ -41,7 +41,7 @@ class TestParseModId:
             ),
         ]
     )
-    def test_parse_from_str(self, html: str, expected_mod_id: str) -> None:
+    def test_mod_id_is_found(self, html: str, expected_mod_id: str) -> None:
         mod_id = mod_info_scraper.parse_mod_id(html)
 
         assert mod_id == expected_mod_id
@@ -54,7 +54,7 @@ class TestParseModId:
             ),
         ]
     )
-    def test_mod_id_is_none(self, html: str) -> None:
+    def test_mod_id_is_not_found(self, html: str) -> None:
         mod_id = mod_info_scraper.parse_mod_id(html)
 
         assert mod_id is None
