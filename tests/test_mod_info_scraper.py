@@ -46,6 +46,19 @@ class TestParseModId:
 
         assert mod_id == expected_mod_id
 
+    @pytest.mark.parametrize(
+        'html',
+        [
+            pytest.param(
+                '<br>RANDOM TEXT</div>',
+            ),
+        ]
+    )
+    def test_mod_id_is_none(self, html: str) -> None:
+        mod_id = mod_info_scraper.parse_mod_id(html)
+
+        assert mod_id is None
+
 
 class TestParseWorkshopId:
     @pytest.mark.parametrize(
