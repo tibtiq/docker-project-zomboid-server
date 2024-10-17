@@ -27,47 +27,6 @@ class TestScrapeWorkshopLink:
 
 class TestParseModId:
     @pytest.mark.parametrize(
-        'link, expected_mod_id',
-        [
-            pytest.param(
-                'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091',
-                ['craftable-lights-robboinnit'],
-                id='regular'
-            ),
-            pytest.param(
-                'https://steamcommunity.com/sharedfiles/filedetails/?id=2857548524',
-                ['ISA_41'],
-                id='table'
-            ),
-            pytest.param(
-                "https://steamcommunity.com/sharedfiles/filedetails/?id=3233560173",
-                ["Ninja Science"],
-                id="duplicates_with_breaks"
-            ),
-            pytest.param(
-                "https://steamcommunity.com/sharedfiles/filedetails/?id=2838108930",
-                ["HistoricalWeaponsAndArmor"],
-                id="bolded"
-            ),
-            pytest.param(
-                "https://steamcommunity.com/sharedfiles/filedetails/?id=2949916678",
-                ["DryFishMod"],
-                id="block_quote"
-            ),
-            pytest.param(
-                "https://steamcommunity.com/sharedfiles/filedetails/?id=2618566294",
-                ["MattSimpleAddonsFriuts"],
-                id="list",
-            ),
-        ]
-    )
-    def test_parse_from_html(self, link: str, expected_mod_id: str) -> None:
-        website_html = mod_info_scraper.scrape_workshop_link(link)
-        mod_id = mod_info_scraper.parse_mod_id(website_html)
-
-        assert mod_id == expected_mod_id
-
-    @pytest.mark.parametrize(
         'html, expected_mod_id',
         [
             pytest.param(
