@@ -20,8 +20,9 @@ class ModIdPattern:
 def scrape_workshop_link(link: str) -> str:
     html = requests.get(link, timeout=10).text
 
-    if '<title>Steam Community :: Error</title>' in html:
-        raise Exception('invalid link')
+    assert '<title>Steam Community :: Error</title>' not in html, (
+        f'{link} is potentially an invalid workshop link'
+    )
 
     return html
 

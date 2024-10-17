@@ -12,8 +12,12 @@ from src import mod_info_scraper
 class TestScrapeWorkshopLink:
     def test_invalid_link(self) -> None:
         link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=apwd'
-        with pytest.raises(Exception):
+        expected_assert_message = (
+            f'{link} is potentially an invalid workshop link'
+        )
+        with pytest.raises(AssertionError) as info:
             mod_info_scraper.scrape_workshop_link(link)
+        assert expected_assert_message in str(info.value)
 
     def test_valid_link(self) -> None:
         link = 'https://steamcommunity.com/sharedfiles/filedetails/?id=2790006091'
